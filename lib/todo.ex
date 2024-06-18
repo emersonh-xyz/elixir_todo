@@ -15,8 +15,7 @@ defmodule TodoApp.Todo do
   end
 
   def remove_task(todo, id) do
-    IO.puts(id)
-    %TodoApp.Todo{todo | tasks: Map.delete(todo.tasks, 1)}
-    IO.inspect(todo)
+    todo = %TodoApp.Todo{todo | tasks: Map.delete(todo.tasks, id)}
+    todo
   end
 end
